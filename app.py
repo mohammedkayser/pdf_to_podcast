@@ -46,7 +46,7 @@ if uploaded_file:
 
         st.text_area("📝 Generated Podcast Script", script, height=300)
 
-        with st.spinner("Converting script to audio using ElevenLabs..."):
+        with st.spinner("Converting script to audio using gTTS..."):
             audio_generator = AudioGenerator()
             audio_path = OUTPUT_DIR / f"{pdf_path.stem}.mp3"
             audio_success = audio_generator.generate_audio(script, str(audio_path))
